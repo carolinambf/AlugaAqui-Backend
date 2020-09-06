@@ -1,0 +1,22 @@
+{
+  "name": "alugaaquigit_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicaRmaria/alugaaquigit_backend.git"
+  },
+  "author": "Jessica e Carolina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jessicaRmaria/alugaaquigit_backend/issues"
+  },
+  "homepage": "https://github.com/jessicaRmaria/alugaaquigit_backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
