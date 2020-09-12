@@ -22,7 +22,8 @@ exports.store = function (req, res) {
     verifyToken(req, res, function(user) {
         let rent = new Rent();
         rent.movie_id = req.body.movie_id;
-        rent.price = prices[rent.movie_id];
+        rent.movie_name = req.body.movie_name;
+        rent.price = prices[rent.movie_id] ? prices[rent.movie_id] : 5.99;
         rent.save();
         res.json(rent);
     });

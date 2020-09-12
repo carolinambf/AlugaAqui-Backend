@@ -2,6 +2,7 @@ const mongoose = require('../db');
 
 let Rent = mongoose.Schema({
   movie_id: { type: String },
+  movie_name: { type: String },
   user_id: { type: String },
   price: { type: Number },
   date_added: { type: Date, default: Date.now },

@@ -19,6 +19,12 @@ exports.register = function(req, res) {
 
 exports.login = function(req, res) {
     User.findOne({ "email": req.body.email }, function(err, user) {
+        if(user == null) {
+            res.json({
+                error: "Utilizador inexistente"
+            });
+            return;
+        }
         let password = req.body.password;
         if(user.password == sha256(password)) {
             let token = sha256("" + (Math.random() * 10000));
@@ -28,7 +34,9 @@ exports.login = function(req, res) {
                 token: token,
             });
         } else {
-            res.json("Login incorreto");
+            res.json({
+                error: "Login incorreto",
+            });
         }
     });
 };

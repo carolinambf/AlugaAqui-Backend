@@ -16,7 +16,9 @@ exports.authUser = authUser;
 exports.verifyToken = function(req, res, callback) {
     authUser(req, function(user) {
         if(user === null) {
-            res.json("Autenticação Inválida");
+            res.json({
+                error: "Autenticação Inválida",
+            });
             return;
         }
         callback(user);
