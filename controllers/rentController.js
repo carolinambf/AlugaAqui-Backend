@@ -4,7 +4,7 @@ const { verifyToken } = require('../auth/user');
 
 exports.all = function(req, res) {
     verifyToken(req, res, function(user) {
-        Rent.find(function(err, rents) {
+        Rent.find({user_id: user._id}, function(err, rents) {
             res.json(rents);
         });
     });
@@ -24,6 +24,7 @@ exports.store = function (req, res) {
         rent.movie_id = req.body.movie_id;
         rent.movie_name = req.body.movie_name;
         rent.price = prices[rent.movie_id] ? prices[rent.movie_id] : 5.99;
+        rent.user_id = user._id;
         rent.save();
         res.json(rent);
     });
