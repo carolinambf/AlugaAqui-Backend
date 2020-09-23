@@ -1,5 +1,5 @@
-exports.all=function(req, res){
-    res.json([
+exports.all=function(req, res){                         
+    res.json([                                    // base de dados teste
         {
             titulo: 'Flash',
             resumo: 'O Flash corre muito!',

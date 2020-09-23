@@ -1,5 +1,5 @@
-const prices = {
-    718444: 8.99,
+const prices = {               //tabela de preços de alguns filmes
+    718444: 8.99,                
     337401: 10.99,
     724989: 11.59,
     734309: 4,

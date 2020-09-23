@@ -1,6 +1,5 @@
 const mongoose = require('../db');
-
-let Rent = mongoose.Schema({
+let Rent = mongoose.Schema({                                // base de dados do aluguer de filmes que faz ligação ao mongoDB 
   movie_id: { type: String },
   movie_name: { type: String },
   user_id: { type: String },
